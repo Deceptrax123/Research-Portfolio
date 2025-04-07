@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | Student Researcher at IIT Delhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            transition: width 0.3s;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .active:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Alex Chen</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-1 py-2 text-sm font-medium">About</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-gray-900 px-1 py-2 text-sm font-medium">Research</a>
+                    <a href="#publications" class="nav-link text-gray-700 hover:text-gray-900 px-1 py-2 text-sm font-medium">Publications</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900 px-1 py-2 text-sm font-medium">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-1 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#research" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Research</a>
+                <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Publications</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Skills</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-blue-500 text-xl"></i>
+                        </div>
+                        Education
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-0 h-full w-0.5 bg-blue-200">
+                                <div class="absolute top-0 -left-1.5 h-3 w-3 rounded-full bg-blue-500"></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-lg font-semibold text-gray-900">Bachelor of Science in Computational Biology</h3>
+                                <p class="text-gray-600 mb-2">University of California, Berkeley</p>
+                                <p class="text-sm text-gray-500">2019 - 2023 | GPA: 3.8/4.0</p>
+                                <p class="mt-2 text-gray-700">
+                                    Relevant coursework: Bioinformatics, Machine Learning, Statistical Genetics, Molecular Biology
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-0 h-full w-0.5 bg-blue-200">
+                                <div class="absolute top-0 -left-1.5 h-3 w-3 rounded-full bg-blue-500"></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-lg font-semibold text-gray-900">Master of Science in Bioinformatics (Expected)</h3>
+                                <p class="text-gray-600 mb-2">Stanford University</p>
+                                <p class="text-sm text-gray-500">2024 - 2026</p>
+                                <p class="mt-2 text-gray-700">
+                                    Research focus: Developing novel computational methods for analyzing high-throughput genomic data
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-briefcase text-emerald-500 text-xl"></i>
+                        </div>
+                        Experience
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-0 h-full w-0.5 bg-emerald-200">
+                                <div class="absolute top-0 -left-1.5 h-3 w-3 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-lg font-semibold text-gray-900">Research Assistant</h3>
+                                <p class="text-gray-600 mb-2">Genomic Data Science Lab, UC Berkeley</p>
+                                <p class="text-sm text-gray-500">June 2022 - Present</p>
+                                <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+                                    <li>Developed Python pipelines for processing and analyzing next-generation sequencing data</li>
+                                    <li>Implemented machine learning models to predict gene expression patterns</li>
+                                    <li>Co-authored 2 peer-reviewed publications in high-impact journals</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-0 h-full w-0.5 bg-emerald-200">
+                                <div class="absolute top-0 -left-1.5 h-3 w-3 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-lg font-semibold text-gray-900">Bioinformatics Intern</h3>
+                                <p class="text-gray-600 mb-2">Biotech Innovations Inc.</p>
+                                <p class="text-sm text-gray-500">Summer 2021</p>
+                                <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+                                    <li>Created R Shiny applications for interactive data visualization</li>
+                                    <li>Optimized DNA sequence alignment algorithms resulting in 40% faster processing</li>
+                                    <li>Presented findings at company-wide symposium</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="relative pl-10">
+                            <div class="absolute left-0 top-0 h-full w-0.5 bg-emerald-200">
+                                <div class="absolute top-0 -left-1.5 h-3 w-3 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-lg font-semibold text-gray-900">Teaching Assistant</h3>
+                                <p class="text-gray-600 mb-2">Department of Biology, UC Berkeley</p>
+                                <p class="text-sm text-gray-500">January 2021 - May 2022</p>
+                                <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+                                    <li>Led discussion sections for Introduction to Bioinformatics course</li>
+                                    <li>Developed and graded programming assignments in Python and R</li>
+                                    <li>Mentored 50+ students in computational biology techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

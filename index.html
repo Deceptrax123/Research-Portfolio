@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Research | Srinitish Srinivasan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+            .gradient-text {
+        background: linear-gradient(90deg, #3b82f6, #10b981);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .typewriter {
+        overflow: hidden;
+        border-right: 2px solid #3b82f6; /* Cursor while typing */
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .15em;
+        display: inline-block;
+        font-weight: 600;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+   
+    @keyframes blink-caret {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+    }
+    .blink {
+        border-right: 2px solid #060707;
+        animation: blink-caret 0.75s step-end infinite;
+    }
+
+    .pulse {
+        animation: pulse 2s infinite;
+    }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Srinitish Srinivasan</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-500 transition">About</a>
+                    <a href="#publications" class="text-gray-700 hover:text-blue-500 transition">Publications</a>
+                    <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-500">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+                    <a href="" class="text-gray-700 hover:text-blue-500 transition">Blog</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500">About</a>
+            <a href="#publications" class="block py-2 text-gray-700 hover:text-blue-500">Publications</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-500">Skills</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+            <a href="" class="text-gray-700 hover:text-blue-500 transition">Blog</a>
+        </div>
+    </nav>
+
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Hi, I'm <span class="gradient-text">Srinitish Srinivasan</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                        <span class="typewriter" id="typewriter"></span>
+                    </h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Undergraduate Student at Vellore Institute of Technology researching graph machine learning and its applications.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-md">
+                            Get In Touch
+                        </a>
+                        <a href="#publications" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">
+                            View Research
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-100 to-green-100 rounded-full flex items-center justify-center">
+                            <img src="Assets/my_image.png" 
+                                 alt="Nitish" 
+                                 class="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-white shadow-lg">
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-white p-3 rounded-full shadow-lg">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-microscope text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        I am a final-year undergraduate student in Computer Science at Vellore Institute of Technology, specializing in 
+                        representation learning, particularly on graph-based models, out-of-distribution (OOD) generalization, and adversarial robustness. 
+                        Beginning May, I will be joining the Indian Institute of Technology Delhi as a Research Fellow under the supervision of 
+                        Dr. Tanmoy Chakraborty.  
+                    </p>
+    
+                    <p class="text-gray-600 mb-6 text-lg">
+                        My final-year research focuses on developing Graph Isomorphic Networks for Riemannian manifolds, exploring their 
+                        theoretical foundations and practical implications. Previously, I was a visiting research student at the 
+                        University of Lincoln, where I worked on mitigating spurious correlations in YOLO object detection models under 
+                        the guidance of Dr. Karthik Seemakurthy.  
+                    </p>
+    
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-brain text-blue-500 mr-2"></i>
+                            <span>Representation Learning</span>
+                        </div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-shield text-blue-500 mr-2"></i>
+                            <span>OOD Generalization</span>
+                        </div>
+                        <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-project-diagram text-blue-500 mr-2"></i>
+                            <span>Graph Machine Learning</span>
+                        </div>
+                    </div>
+    
+                    <div class="mt-8">
+                        <a href="Assets/Srinitish_CV.pdf" class="inline-flex items-center text-blue-500 hover:text-blue-700" download>
+                            <span>Download CV</span>
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Recent News</h2>
+                    <div class="space-y-4">
+                        <div class="bg-indigo-50 p-4 rounded-lg shadow-sm pulse">
+                            <h3 class="text-lg font-semibold text-blue-700">New Position</h3>
+                            <p class="text-sm text-gray-600">Set to join LLCS2, IIT Delhi this May to work on Graph Machine Learning and Robotics under Dr. Tanmoy Chakraborty</p>
+                            <p class="text-xs text-gray-500 mt-1">April, 2025</p>
+                        </div>
+    
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-700">Paper Release</h3>
+                            <p class="text-sm text-gray-600">Our paper on Lorentzian Graph Isomorphic Networks is out on Arxiv.</p>
+                            <p class="text-gray-500 text-xs mt-1">April, 2025</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-700">Paper Release</h3>
+                            <p class="text-gray-600 text-sm">Our paper on Joint Predictive and Bayesian Inference based Graph Self Supervised Learning is out on Arxiv.</p>
+                            <p class="text-gray-500 text-xs mt-1">February, 2025</p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="publications" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Recent Publications</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">Lorentzian Graph Isomorphic Network </h3>
+                            <p class="text-gray-600 mb-2">
+                                Srinitish Srinivasan, Omkumar CU. <span class="font-medium">Preprint</span>
+                            </p>
+                            <p class="text-gray-500">
+                                We propose a novel graph neural network for Riemannian manifolds and has a discriminative power as poweful
+                                as the WL test for non-isomorphic graphs.
+                            </p>
+                        </div>
+                        <div class="md:w-1/4 mt-4 md:mt-0 flex md:justify-end">
+                            <div class="flex space-x-3">
+                                <a href="https://arxiv.org/abs/2504.00142" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 hover:bg-blue-200 transition">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <a href="https://github.com/Deceptrax123/LGIN" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 transition">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">Predicting Liquidity-Aware Bond Yields using Causal GANs and Deep Reinforcement Learning with LLM Evaluation
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                                Jaskaran Singh Walia, Aarush Sinha, Srinitish Srinivasan, Srihari Unnikrishnan. <span class="font-medium">Preprint</span>
+                            </p>
+                            <p class="text-gray-500">
+                                Designed a CausalGAN and RL-based framework to generate synthetic bond yield data for enhanced forecasting. Integrated a fine-tuned LLM to provide trading signals, risk assessments, and volatility projections.
+                            </p>
+                        </div>
+                        <div class="md:w-1/4 mt-4 md:mt-0 flex md:justify-end">
+                            <div class="flex space-x-3">
+                                <a href="https://arxiv.org/abs/2502.17011" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 hover:bg-blue-200 transition">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <a href="https://github.com/Deceptrax123/team_38" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 transition">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">Leveraging Joint Predictive Embedding and Bayesian Inference in Graph Self Supervised Learning</h3>
+                            <p class="text-gray-600 mb-2">
+                                Srinitish Srinivasan, Omkumar CU. <span class="font-medium">Preprint</span>
+                            </p>
+                            <p class="text-gray-500">
+                                A novel, scalable graph self supervised technique that leverages both joint predictive embedding architecture and Bayesian inference. 
+                            </p>
+                        </div>
+                        <div class="md:w-1/4 mt-4 md:mt-0 flex md:justify-end">
+                            <div class="flex space-x-3">
+                                <a href="https://arxiv.org/abs/2502.01684" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 hover:bg-blue-200 transition">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <a href="https://github.com/Deceptrax123/JPEB-GSSL" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 transition">
+                                    <i class="fas fa-code"></i>
+                                </a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">Detecting Side Effects of Adverse Drug Reactions using Graph Self Supervised Learning</h3>
+                            <p class="text-gray-600 mb-2">
+                                Omkumar CU, Srinitish Srinivasan, Varenya Pathak. <span class="font-medium">IEEE Access</span>
+                            </p>
+                            <p class="text-gray-500">
+                                Developed a Graph Neural Network framework to predict adverse drug reactions from drug-drug interactions. Our approach enhances early detection of side effects, addressing a major challenge in pharmacovigilance.
+                            </p>
+                        </div>
+                        <div class="md:w-1/4 mt-4 md:mt-0 flex md:justify-end">
+                            <div class="flex space-x-3">
+                                <a href="https://ieeexplore.ieee.org/document/10543001" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 hover:bg-blue-200 transition">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <a href="https://github.com/Deceptrax123/Detecting-Side-Effects-of-ADRs-using-GNNs-and-SSL" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 transition">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://scholar.google.com/citations?user=Vz1FpKAAAAAJ&hl=en" class="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                    <span>View All Publications</span>
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    My specialized skills and areas of technical proficiency
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-brain text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">ML Frameworks</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">PyTorch</span>
+                                <span class="text-sm font-medium text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">TensorFlow</span>
+                                <span class="text-sm font-medium text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">JAX</span>
+                                <span class="text-sm font-medium text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Software Development & Engineering</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">System Design</span>
+                                <span class="text-sm font-medium text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Microservices</span>
+                                <span class="text-sm font-medium text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Backend APIs</span>
+                                <span class="text-sm font-medium text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tools text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Other Skills & Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full">Git</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">LaTeX</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">Linux</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm font-medium rounded-full">CI/CD</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 text-sm font-medium rounded-full">MLflow</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full">Airflow</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">HuggingFace</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Weights & Biases</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full">Flask</span>
+                        <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm font-medium rounded-full">FastAPI</span>
+                        <span class="px-3 py-1 bg-gray-200 text-gray-900 text-sm font-medium rounded-full">Django</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-800 text-sm font-medium rounded-full">Express</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm always interested in discussing research collaborations, 
+                        speaking opportunities, or just chatting about AI/ML. 
+                        Feel free to reach out!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Email</p>
+                                <p class="font-medium">smudge0110@icloud.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Office</p>
+                                <p class="font-medium">Laboratory of Computational Social Systems, Yardi School of AI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Phone</p>
+                                <p class="font-medium">+91 6361898395</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-3">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/srinitish-srinivasan-94849924a/" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-200 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Deceptrax123" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-200 transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=Vz1FpKAAAAAJ&hl=en" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-200 transition">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="69c5508f-ea88-472b-b2f8-f496f3315b2a">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Srinitish Srinivasan</span>
+                    <p class="text-gray-400 mt-2">Machine Learning Researcher</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/srinitish-srinivasan-94849924a/" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/Deceptrax123" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=Vz1FpKAAAAAJ&hl=en class="class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </a>
+                    <a href="https://open.spotify.com/user/hr7259glutzuuals2wvt6z4h3?si=dd50fe0eb1e34abe" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-spotify text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>© 2025 Srinitish Srinivasan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
