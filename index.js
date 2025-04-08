@@ -33,7 +33,7 @@ setTimeout(() => {
 }, 3500);
 
     document.addEventListener("DOMContentLoaded", function() {
-        const text = "Machine Learning Researcher";
+        const text = "ML Researcher | Freelancer";
         let index = 0;
         const speed = 100; // Typing speed
         const typewriter = document.getElementById("typewriter");
