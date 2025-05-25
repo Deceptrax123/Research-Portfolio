@@ -9,6 +9,7 @@
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
             .gradient-text {
         background: linear-gradient(90deg, #3b82f6, #10b981);
@@ -78,6 +79,7 @@
                     <a href="#about" class="text-gray-700 hover:text-blue-500 transition">About</a>
                     <a href="#publications" class="text-gray-700 hover:text-blue-500 transition">Publications</a>
                     <a href="#contact" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+                    <a href="#call" class="text-gray-700 hover:text-blue-500 transition">Book a Call</a>
                     <a href="" class="text-gray-700 hover:text-blue-500 transition">Blog(Coming Soon)</a>
                 </div>
                 <div class="md:hidden flex items-center">
@@ -365,8 +367,16 @@ tasks.
                                 <p class="text-gray-500 text-sm">Office</p>
                                 <p class="font-medium">LCS2, Yardi School of AI, IIT Delhi</p>
                             </div>
-                        </div>
-                     
+                        </div>  
+                     </div>
+                      <div class="mt-8 pt-4 border-t border-gray-200" id="call">
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Book a 1:1 video call to discuss research collaborations or freelancing oppurtunities. Please 
+                            do mention the purpose of the call or abstract of the research in the meeting details.
+                        </p>
+                        <button id="scheduleCallBtn" type="button" class="inline-flex items-center border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                            <i class="fas fa-video mr-2"></i> Schedule a Call
+                        </button>
                     </div>
                 </div>
                 <div class="md:w-1/2">
@@ -394,6 +404,7 @@ tasks.
                     </form>
                 </div>
             </div>
+          
         </div>
     </section>
 
@@ -426,5 +437,6 @@ tasks.
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>

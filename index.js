@@ -50,3 +50,18 @@ setTimeout(() => {
 
         typeWriterEffect();
     });
+
+    const scheduleCallBtn = document.getElementById('scheduleCallBtn');
+
+    if (scheduleCallBtn) {
+        scheduleCallBtn.addEventListener('click', function() {
+            // Check if Calendly is loaded before trying to use it
+            if (typeof Calendly !== 'undefined' && typeof Calendly.initPopupWidget === 'function') {
+                Calendly.initPopupWidget({
+                    url: 'https://calendly.com/srinitishsri/30min' // Replace with your actual Calendly event URL
+                });
+            } else {
+                console.error("Calendly widget script not loaded or 'Calendly.initPopupWidget' is not a function.");
+            }
+        });
+    };
